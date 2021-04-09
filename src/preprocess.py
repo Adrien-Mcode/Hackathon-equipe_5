@@ -1,4 +1,4 @@
 
 
-def preprocess(df):
+def preprocess(df, config):
     return df

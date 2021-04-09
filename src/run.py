@@ -1,6 +1,9 @@
 import argparse
 import logging
 import sys
+from .config import CommonConfig
+from .train import do_training
+from .test import do_test
 
 logger = logging.getLogger(__name__)
 
@@ -24,19 +27,11 @@ def main():
     modes = [x for x in arg.mode]
     logger.info(f"will run modes : {modes}")
     for mode in modes:
-        config = (YamlConfig()
-                  .from_args(arg)
-                  .from_model_args(arg)
-                  .from_db_args(arg)
-                  .get_grain_perimeter()
-                  .get_mode_dates(mode))
-        state = GlobalState(config)
+        config = CommonConfig(default_configs=[], custom_configs=[])
         if mode == 'train':
-            do_training(state, config)
+            do_training(config)
         if mode == 'test':
-            do_test(state, config)
-        if mode == 'predict':
-            do_predict(state, config)
+            do_test(config)
         logger.info(f"{mode} is DONE")
     logger.info('[%s] Finished ' % ' '.join(sys.argv[:]))
 
