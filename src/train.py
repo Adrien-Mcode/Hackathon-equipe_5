@@ -28,11 +28,12 @@ def do_training(config):
         eval(train_preprocess_df, model, config)
 
         our_test_df = get_our_test(config)
-        our_test_preprocess_df, _ = preprocess(our_test_df, config)
+        our_test_preprocess_df = preprocess(our_test_df, config)
         eval(our_test_preprocess_df, model, config, mode="test")
 
 
-def train(train_df, inputers, config):
+def train(train_df, config):
+    inputers = []
     if config.model_type == "logit":
         inputers.append(("logit", LogisticRegression(class_weight='balanced')))
     elif config.model_type == "rfc":
