@@ -55,7 +55,7 @@ class CommonConfig:
         self._from_dict()
         self.args = args
         self._from_args()
-        self.model_filename = os.path.join(self.path.model, re.sub(r'\W+', '_', self.model_name) + ".pkl")
+        self.model_filename = "model/" + re.sub(r'\W+', '_', self.model_name) + ".pkl"
 
     def _from_args(self):
         for k, v in vars(self.args).items():

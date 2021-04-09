@@ -1,0 +1,6 @@
+nrows_train: 10
+nrows_test: 10
+split_ratio: 0.5
+model_name: dummy
+sample_name: dummy_sample
+get_new: False

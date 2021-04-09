@@ -17,8 +17,6 @@ logger = logging.getLogger(__name__)
 def read_yaml(filename: str):
     with open(filename, encoding='utf8') as f:
         d = dynamic_yaml.load(f)
-        import ipdb
-        ipdb.set_trace()
     return d
 
 

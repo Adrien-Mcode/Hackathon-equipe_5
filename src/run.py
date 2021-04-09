@@ -1,9 +1,9 @@
 import argparse
 import logging
 import sys
-from .config import CommonConfig
-from .train import do_training
-from .test import do_test
+from src.config import CommonConfig
+from src.train import do_training
+from src.test import do_test
 
 logger = logging.getLogger(__name__)
 
@@ -16,7 +16,7 @@ def parse_command_args() -> argparse.Namespace:
     parser.add_argument('-s', '--step', type=str, nargs='+',
                         help='execution step: all, raw, preprocess, training, predict, eval',
                         default='all')
-    parser.add_argument('--config', default='src/conf_run.yml')
+    parser.add_argument('--config', default='config.yaml')
     return parser.parse_args()
 
 
@@ -27,7 +27,7 @@ def main():
     modes = [x for x in arg.mode]
     logger.info(f"will run modes : {modes}")
     for mode in modes:
-        config = CommonConfig(default_configs=[], custom_configs=[])
+        config = CommonConfig(default_configs=[], custom_configs=[arg.config], args=arg)
         if mode == 'train':
             do_training(config)
         if mode == 'test':
@@ -38,9 +38,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-if __name__ == '__main__':
