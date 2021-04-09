@@ -6,4 +6,5 @@ def preprocess(df, config):
                       'manual_removed_supply', 'meals_saved', 'consumer_cancellation',
                       'store_cancellation', 'item_price', 'meals_refunded',
                       'rating_count', 'sum_rating_overall', 'target']]
-    return df
+    inputers = []
+    return df, inputers
