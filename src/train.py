@@ -4,6 +4,7 @@ import mlflow
 from .utils import save_mlflow_run_id, save_model
 from .plot import log_stat_desc
 from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 from .raw import get_our_test
 import os
 from sklearn.pipeline import Pipeline
@@ -32,22 +33,29 @@ def do_training(config):
 def train(train_df, inputers, config):
     if config.model_type == "logit":
         inputers.append(("logit", LogisticRegression(class_weight='balanced')))
+    elif config.model_type == "rfc":
+        inputers.append(("rfc", RandomForestClassifier()))
     else:
         clf = None
     clf = Pipeline(inputers).fit(train_df.drop(["target"], axis=1), train_df["target"])
-    mlflow.sklearn.log_model(clf, "TDJ forecast model")
+    mlflow.sklearn.log_model(clf, f"{config.model_name}_{config.model_type}")
     save_model(clf, config.model_filename)
     return clf
 
 
-def eval(train_df, clf, config, mode="train"):
-    y_pred = clf.predict(train_df.drop(["target"], axis=1))
-    y_real = train_df["target"]
+def eval(df, clf, config, mode="train"):
+    y_pred = clf.predict(df.drop(["target"], axis=1))
+    y_real = df["target"]
     metrics = [balanced_accuracy_score, recall_score, precision_score, f1_score, accuracy_score]
     scores = {metric.__name__: metric(y_real, y_pred) for metric in metrics}
     mlflow.log_metrics(scores)
-    fig = plot_confusion_matrix(clf, train_df.drop(["target"], axis=1), y_real).plot().figure_
+    fig = plot_confusion_matrix(clf, df.drop(["target"], axis=1), y_real).plot().figure_
     filename = os.path.join(config.figure_folder, mode + "_confusion_matrix.png")
     fig.savefig(filename)
     mlflow.log_artifact(filename, "confusion_matrix")
+    importance_df = compute_feature_importance()
+    fig = plot_feature_importance()
+    filename = os.path.join(config.figure_folder, mode + "_confusion_matrix.png")
+    fig.savefig(filename)
+    mlflow.log_artifact()
 
