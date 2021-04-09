@@ -55,7 +55,8 @@ class CommonConfig:
         self._from_dict()
         self.args = args
         self._from_args()
-        self.model_filename = "model/" + re.sub(r'\W+', '_', self.model_name) + ".pkl"
+        self.model_filename = "model/" + self.model_name + "_" + self.sample_name + ".pkl"
+        self.figure_folder = "figure/" + self.model_name + "_" + self.sample_name
 
     def _from_args(self):
         for k, v in vars(self.args).items():

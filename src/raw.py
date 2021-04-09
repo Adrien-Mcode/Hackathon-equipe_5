@@ -5,6 +5,7 @@ import os
 
 
 def generate_train(config):
+    # TODO : utiliser train_test_split
     n = sum(1 for line in open("train.csv")) - 1  # number of records in file (excludes header)
     s = config.nrows_train
     skip = sorted(random.sample(range(1, n + 1), n - s))  # the 0-indexed header will not be included in the skip list

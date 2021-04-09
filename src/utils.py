@@ -166,3 +166,4 @@ def load_model(path_to_model):
 def date_to_datetime(date):
     """datetime.date(2001,01,01) -> datetime.datetime(2001,01,01,00,00,00,000)"""
     return dt.datetime.combine(date, dt.datetime.min.time())
+

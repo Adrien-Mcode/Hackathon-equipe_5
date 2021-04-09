@@ -10,9 +10,6 @@ Régression logistique sur database
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import balanced_accuracy_score, plot_confusion_matrix, recall_score, precision_score, f1_score, accuracy_score
 
 database = pd.read_csv(r"C:\Users\Asus\Desktop\Jérémie\Hackathon\train.csv")
 
@@ -24,16 +21,8 @@ y = database.target
 
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 
-clf = LogisticRegression(class_weight='balanced').fit(X_train, y_train)
 
-clf.score(X_test, y_test)
 
-metrics = [balanced_accuracy_score, recall_score, precision_score, f1_score, accuracy_score]
-
-scores = [metric(y_test, clf.predict(X_test)) for metric in metrics]
-balanced_accuracy_score(y_test, clf.predict(X_test))
-
-plot_confusion_matrix(clf, X_test, y_test)
 
 # Passage sur mlflow
 
