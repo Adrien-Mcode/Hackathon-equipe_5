@@ -12,6 +12,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import balanced_accuracy_score, plot_confusion_matrix, \
     recall_score, precision_score, f1_score, accuracy_score
 
+from .feature_importance import compute_feature_importance
+
 
 def do_training(config):
     run_name = config.model_name + str(config.nrows_train)
@@ -26,11 +28,12 @@ def do_training(config):
         eval(train_preprocess_df, model, config)
 
         our_test_df = get_our_test(config)
-        our_test_preprocess_df, _ = preprocess(our_test_df, config)
+        our_test_preprocess_df = preprocess(our_test_df, config)
         eval(our_test_preprocess_df, model, config, mode="test")
 
 
-def train(train_df, inputers, config):
+def train(train_df, config):
+    inputers = []
     if config.model_type == "logit":
         inputers.append(("logit", LogisticRegression(class_weight='balanced')))
     elif config.model_type == "rfc":
@@ -53,8 +56,10 @@ def eval(df, clf, config, mode="train"):
     filename = os.path.join(config.figure_folder, mode + "_confusion_matrix.png")
     fig.savefig(filename)
     mlflow.log_artifact(filename, "confusion_matrix")
-    importance_df = compute_feature_importance()
-    fig = plot_feature_importance()
+    import ipdb
+    ipdb.set_trace()
+    importance_df = compute_feature_importance(clf, df)
+    # fig = plot_feature_importance()
     filename = os.path.join(config.figure_folder, mode + "_confusion_matrix.png")
     fig.savefig(filename)
     mlflow.log_artifact()
