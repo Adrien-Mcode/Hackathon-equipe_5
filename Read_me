@@ -1,1 +1,7 @@
-Hello world
+Créer un nouveau modèle/plusieurs nouveaux modèles.
+
+* créer un fichier "nomdemaconfig.yml" et le remplir
+* entrer via ligne de commande dans l'environnement sur lequel est installé ton python
+* exécuter python run.py --config nomdemaconfig.yml
+* éventuellement lancer plusieurs lignes à la suite
+

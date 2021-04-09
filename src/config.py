@@ -57,6 +57,7 @@ class CommonConfig:
         self._from_args()
         self.model_filename = "model/" + self.model_name + "_" + self.sample_name + ".pkl"
         self.figure_folder = "figure/" + self.model_name + "_" + self.sample_name
+        safe_create_dir(self.figure_folder)
 
     def _from_args(self):
         for k, v in vars(self.args).items():

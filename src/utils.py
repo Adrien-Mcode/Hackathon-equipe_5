@@ -104,9 +104,12 @@ def safe_create_dir(path):
 
 
 def save_mlflow_run_id(run_name, run_id, dict_path):
-
+    def aux_read_yaml(filename: str):
+        with open(filename, encoding='utf8') as f:
+            d = yaml.load(f)
+        return d
     if os.path.isfile(dict_path):
-        id_dict = read_yaml(dict_path)
+        id_dict = aux_read_yaml(dict_path)
         id_dict[run_name] = run_id
         write_yaml(id_dict, dict_path)
     else:
