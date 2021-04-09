@@ -15,18 +15,21 @@ X_train, X_test, y_train, y_test = train_test_split(X,y)
 
 forest = RandomForestClassifier().fit(X_train, y_train)
 
-def compute_feature_importance(clf):
+
+def compute_feature_importance(clf, df):
     importances = clf.feature_importances_
     # std = np.std([tree.feature_importances_ for tree in clf.estimators_], axis=0)
     indices = np.argsort(importances)[::-1]
+    print(indices)
 
     # Print the feature ranking
     print("Feature ranking:")
 
-    for f in range(X.shape[1]):
-        print(f"{f+1}. feature {indices[f]} : {X.columns[f]} ({importances[indices[f]]})")
-        
-compute_feature_importance(forest)
+    for f in range(df.shape[1]):
+        print(f"{f+1}. feature {indices[f]} : {df.columns[indices[f]-1]} ({importances[indices[f]]})")
+
+
+compute_feature_importance(forest, X)
 
 
 
