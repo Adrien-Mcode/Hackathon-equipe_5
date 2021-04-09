@@ -3,6 +3,7 @@ import os
 from munch import munchify
 import dynamic_yaml
 from dynamic_yaml.yaml_wrappers import YamlDict
+from .utils import write_yaml
 import logging
 import re
 
@@ -57,7 +58,11 @@ class CommonConfig:
         self._from_args()
         self.model_filename = "model/" + self.model_name + "_" + self.sample_name + ".pkl"
         self.figure_folder = "figure/" + self.model_name + "_" + self.sample_name
+        self.config_folder = "figure/" + self.model_name + "_" + self.sample_name
+        self.config_filepath = os.path.join(self.config_folder, "config.yml")
         safe_create_dir(self.figure_folder)
+        safe_create_dir(self.config_folder)
+        write_yaml(self.dict_attr, self.config_filepath)
 
     def _from_args(self):
         for k, v in vars(self.args).items():

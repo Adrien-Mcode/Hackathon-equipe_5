@@ -15,6 +15,7 @@ def do_training(config):
     with mlflow.start_run(run_name=run_name) as run:
         run_id = run.info.run_id
         save_mlflow_run_id(run_name, run_id, "save_mlflow_dict.yml")
+        mlflow.log_artifact(config.config_filepath, "config")
         train_df = get_train(config)
         log_stat_desc()
         train_preprocess_df = preprocess(train_df, config)
@@ -24,7 +25,7 @@ def do_training(config):
 
 def train(train_df, config):
     if config.model_type == "logit":
-        clf = LogisticRegression(class_weight='balanced').fitg(train_df.drop(["target"], axis=1), train_df["target"])
+        clf = LogisticRegression(class_weight='balanced').fit(train_df.drop(["target"], axis=1), train_df["target"])
     else:
         clf = None
 
