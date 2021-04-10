@@ -1,19 +1,26 @@
 import numpy as np
-from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import balanced_accuracy_score
+import pandas as pd
 
+def compute_feature_importance(rf, df):
 
-def compute_feature_importance(clf, df):
-    if not isinstance(clf["model"], LogisticRegression):
-        importances = clf.feature_importances_
-        # std = np.std([tree.feature_importances_ for tree in clf.estimators_], axis=0)
-        indices = np.argsort(importances)[::-1]
-        print(indices)
-
-        # Print the feature ranking
-        print("Feature ranking:")
-
-        for f in range(df.shape[1]):
-            print(f"{f+1}. feature {indices[f]} : {df.columns[indices[f]-1]} ({importances[indices[f]]})")
+    def permutation_importances(rf, df):
+        y_pred = rf.predict(df.drop(["target"], axis=1))
+        y_train = df["target"]
+        X_train = df.drop(["target"], axis=1)
+        baseline = balanced_accuracy_score(y_pred, y_train)
+        imp = {}
+        for col in X_train.columns.values:
+            save = X_train[col].copy()
+            X_train[col] = np.random.permutation(X_train[col])
+            y_pred = rf.predict(X_train)
+            m = balanced_accuracy_score(y_train, y_pred)
+            X_train[col] = save
+            imp[col] = baseline - m
+        return imp
+    imp = permutation_importances(rf, df)
+    imp = pd.DataFrame.from_dict(imp, orient='index', columns=["feature_importance"])
+    return imp
 
 
 

@@ -1,9 +1,10 @@
 import argparse
 import logging
 import sys
+import os
 from src.config import CommonConfig
 from src.train import do_training
-
+import random
 logger = logging.getLogger(__name__)
 
 
@@ -14,8 +15,10 @@ def parse_command_args() -> argparse.Namespace:
 
 
 def truc():
+
+    print(os.getcwd())
     arg = parse_command_args()
-    config = CommonConfig(default_configs=[], custom_configs=[arg.config], args=arg)
+    config = CommonConfig(default_configs=[], custom_configs=["config_grid.yml"], args=arg)
     do_training(config)
 
 

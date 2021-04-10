@@ -57,10 +57,10 @@ class CommonConfig:
         self.args = args
         self._from_args()
         self.model_filename = "model/" + self.model_name + "_" + self.sample_name + ".pkl"
-        self.figure_folder = "figure/" + self.model_name + "_" + self.sample_name
+        self.csv_folder = "figure/" + self.model_name + "_" + self.sample_name
         self.config_folder = "figure/" + self.model_name + "_" + self.sample_name
         self.config_filepath = os.path.join(self.config_folder, "config.yml")
-        safe_create_dir(self.figure_folder)
+        safe_create_dir(self.csv_folder)
         safe_create_dir(self.config_folder)
         write_yaml(self.dict_attr, self.config_filepath)
 

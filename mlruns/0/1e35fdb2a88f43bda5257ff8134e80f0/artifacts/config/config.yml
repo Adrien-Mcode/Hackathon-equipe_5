@@ -1,8 +1,0 @@
-get_new: false
-model_name: dummy
-model_type: logit
-nrows_test: 10
-nrows_train: 1000
-only_quantitative: true
-sample_name: dummy_sample
-split_ratio: 0.5
