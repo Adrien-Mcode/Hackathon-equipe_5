@@ -5,8 +5,9 @@ import dash_html_components as html
 from src.dash.app import app
 from dash.dependencies import Input, Output
 import plotly.express as px
+from src.dash.model_report.shap_values import shap_layout
 
-df_score = pd.read_csv(r'C:\Users\SURFACE\Documents\Ensae\2A\Hackathon\scores_fin.csv')
+df_score = pd.read_csv(r'..\..\df_petit.csv')
 
 @app.callback(Output('scatter_plot_score','figure'),
               [
@@ -35,10 +36,13 @@ def figure_score (type,model,sample_size,only_quanti,inputer,metric_1,metric_2):
     return fig
 
 
-@app.callback(Output("tabs-content-example","children"),
+@app.callback(Output("tabs-content-example", "children"),
               Input("tabs-example", "value"))
 def update_children(value):
-    if value == 'performances-globales':
+    if value == 'explicabilite-locale':
+        children = shap_layout
+        return children
+    elif value == 'performances-globales':
         children = [dcc.Dropdown(
             id="selec_metrique_1",
             options=[
