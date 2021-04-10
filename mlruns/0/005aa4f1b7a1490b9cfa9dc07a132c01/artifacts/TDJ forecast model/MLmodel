@@ -1,0 +1,13 @@
+artifact_path: TDJ forecast model
+flavors:
+  python_function:
+    env: conda.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    python_version: 3.6.8
+  sklearn:
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 0.24.1
+run_id: 005aa4f1b7a1490b9cfa9dc07a132c01
+utc_time_created: '2021-04-09 20:10:13.154922'
