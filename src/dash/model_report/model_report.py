@@ -1,7 +1,133 @@
 import dash
+import pandas as pd
 import dash_core_components as dcc
 import dash_html_components as html
 from src.dash.app import app
+from dash.dependencies import Input, Output
+import plotly.express as px
+
+df_score = pd.read_csv(r'C:\Users\SURFACE\Documents\Ensae\2A\Hackathon\scores_fin.csv')
+
+@app.callback(Output('scatter_plot_score','figure'),
+              [
+                  Input('Checklist_type','value'),
+                  Input('Checklist_model','value'),
+                  Input('Checklist_sample_size','value'),
+                  Input('Checklist_only_quanti','value'),
+                  Input('Checklist_inputer','value'),
+                  Input('selec_metrique_1','value'),
+                  Input('selec_metrique_2','value')
+              ])
+def figure_score (type,model,sample_size,only_quanti,inputer,metric_1,metric_2):
+    df = df_score[(df_score.type.isin(type)) &
+                  (df_score.model.isin(model)) &
+                  (df_score.sample_size.isin(sample_size)) &
+                  (df_score.only_quantitative.isin(only_quanti)) &
+                  (df_score.inputer.isin(inputer))]
+    fig = px.scatter(df,x = str(metric_1),y = str(metric_2))
+    fig.update_layout(title={
+        'text': 'représentation des modèles en fonction des métriques et variables choisies',
+        'font': {'size': 25},
+        'y': 0.95,
+        'x': 0.5,
+        'xanchor': 'center',
+        'yanchor': 'top'})
+    return fig
+
+
+@app.callback(Output("tabs-content-example","children"),
+              Input("tabs-example", "value"))
+def update_children(value):
+    if value == 'performances-globales':
+        children = [dcc.Dropdown(
+            id="selec_metrique_1",
+            options=[
+                {"label": colonne,
+                 "value": colonne} for colonne in ['balanced_accuracy_score',
+                                                   'recall_score',
+                                                   'precision_score',
+                                                   'f1_score',
+                                                   'accuracy_score']
+        ],
+        value="balanced_accuracy_score",
+        clearable=False,
+        className="menu-box",
+    ),
+        dcc.Dropdown(
+                id="selec_metrique_2",
+                options=[
+                    {"label": colonne,
+                     "value": colonne} for colonne in ['balanced_accuracy_score',
+                                                       'recall_score',
+                                                       'precision_score',
+                                                       'f1_score',
+                                                       'accuracy_score']
+                ],
+                value="recall_score",
+                clearable=False,
+                className="menu-box",
+            ),
+            dcc.Checklist(
+                id="Checklist_type",
+                options=[
+                    {'label': 'type = test', 'value': 'test'},
+                    {'label': 'type = train', 'value': 'train'},
+                ],
+                value=['test','train'],
+                labelStyle={'display': 'inline-block'}
+            ),
+            dcc.Checklist(
+                id="Checklist_model",
+                options=[
+                    {'label': 'model = lightgbm', 'value': 'lightgbm'},
+                    {'label': 'model = logit', 'value': 'logit'},
+                    {'label': 'model = rfc', 'value': 'rfc'}
+                ],
+                value=['lightgbm','logit','rfc'],
+                labelStyle={'display': 'inline-block'}
+            ),
+            dcc.Checklist(
+                id="Checklist_sample_size",
+                options=[
+                    {'label': 'sample_size = 100000', 'value': 100000},
+                    {'label': 'sample_size = 10000', 'value': 10000},
+                    {'label': 'sample_size = 1000', 'value': 1000},
+                    {'label': 'sample_size = 500000', 'value': 500000},
+                    {'label': 'sample_size = 500', 'value': 500}
+                ],
+                value=['100000','10000','1000','500000'],
+                labelStyle={'display': 'inline-block'}
+            ),
+
+            dcc.Checklist(
+                id="Checklist_only_quanti",
+                options=[
+                    {'label': 'only quanti = True', 'value': 'True'},
+                    {'label': 'only quanti = False', 'value': 'False'},
+                ],
+                value=['True','False'],
+                labelStyle={'display': 'inline-block'}
+            ),
+            dcc.Checklist(
+            id="Checklist_inputer",
+            options = [
+            {'label': 'type = iterative', 'value': 'iterative'},
+            {'label': 'type = simple', 'value': 'simple'},
+            ],
+            value=['iterative','simple'],
+            labelStyle={'display': 'inline-block'}
+        ),
+        dcc.Graph(
+            id='scatter_plot_score'
+        )]
+        return(children)
+    else :
+        children = [
+            html.P(
+                'Bonsoir'
+            )]
+        return children
+
 
 layout = html.Div(
     children= \
@@ -22,7 +148,12 @@ layout = html.Div(
              dcc.Tab(label='Explicabilité locale', value='explicabilite-locale'),
              dcc.Tab(label='Performances globales', value='performances-globales')
          ]),
-         html.Div(id='tabs-content-example'),
+         html.Div(
+             children=[
+                 html.P(
+                     'Bonsoir'
+             )],
+             id='tabs-content-example'),
          ],
     className="header",
 )
