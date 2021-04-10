@@ -7,11 +7,9 @@ import plotly.express as px
 from src.dash.app import app
 from dash.dependencies import Input, Output
 
-<<<<<<< Updated upstream
-data = pd.read_csv('../../df_petit.csv')
-=======
+
+
 data = pd.read_csv(r'C:\Users\SURFACE\Documents\GitHub\Hackathon-equipe_5\df_petit.csv')
->>>>>>> Stashed changes
 data_churn = data.loc[data.target == 1]
 data_cl = data.loc[data.target == 0]
 churn_date = data_churn.groupby('date').sum().target

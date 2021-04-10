@@ -95,17 +95,17 @@ def update_children(value):
                     {'label': 'sample_size = 500000', 'value': 500000},
                     {'label': 'sample_size = 500', 'value': 500}
                 ],
-                value=['100000','10000','1000','500000'],
+                value=[100000,10000,1000,500000,500],
                 labelStyle={'display': 'inline-block'}
             ),
 
             dcc.Checklist(
                 id="Checklist_only_quanti",
                 options=[
-                    {'label': 'only quanti = True', 'value': 'True'},
-                    {'label': 'only quanti = False', 'value': 'False'},
+                    {'label': 'only quanti = True', 'value': True},
+                    {'label': 'only quanti = False', 'value': False},
                 ],
-                value=['True','False'],
+                value=[True,False],
                 labelStyle={'display': 'inline-block'}
             ),
             dcc.Checklist(
