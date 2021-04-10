@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from sklearn.feature_selection import mutual_info_classif
 
-df = pd.read_csv(r'C:\Users\Asus\Desktop\Jérémie\Hackathon\train.csv').sample(50000)
+df = pd.read_csv(r'C:\Users\SURFACE\Documents\GitHub\Hackathon-equipe_5\df_petit.csv')
 
 X = df[[
     'total_supply', 'declared_supply', 'manual_added_supply',
@@ -32,4 +32,4 @@ res2[:,11][:11]
 df_mutual = pd.DataFrame(index=X.columns, columns=['mutual'], data=res)
 df_mutual['corrcoef']=res2[:,11][:11]
 
-df_mutual
+df_mutual.to_csv('df_mutual.csv')

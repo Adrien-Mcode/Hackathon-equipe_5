@@ -7,16 +7,22 @@ import plotly.express as px
 from src.dash.app import app
 from dash.dependencies import Input, Output
 
+<<<<<<< Updated upstream
 data = pd.read_csv('../../df_petit.csv')
+=======
+data = pd.read_csv(r'C:\Users\SURFACE\Documents\GitHub\Hackathon-equipe_5\df_petit.csv')
+>>>>>>> Stashed changes
 data_churn = data.loc[data.target == 1]
 data_cl = data.loc[data.target == 0]
 churn_date = data_churn.groupby('date').sum().target
+df_mutual = pd.read_csv(r'C:\Users\SURFACE\Documents\GitHub\Hackathon-equipe_5\mutual_information\df_mutual.csv')
+df_mutual.columns = ['Variables','Information mutuelle','Correlation']
 
 @app.callback(Output("date_churn","figure"),
               [Input("date-range", "start_date"),
                Input("date-range", "end_date")
                ])
-def update_charts(start_date, end_date):
+def update_date_charts(start_date, end_date):
     mask=((churn_date.index <= end_date)
             & (churn_date.index >= start_date)
           )
@@ -33,6 +39,13 @@ def update_charts(start_date, end_date):
         'xanchor': 'center',
         'yanchor': 'top'})
     return figure
+
+def corr_chart():
+    fig = go.Figure(data=[
+        go.Bar(name='Corrélation', x=df_mutual['Variables'], y=df_mutual['Correlation']),
+        go.Bar(name='Information mutuelle', x=df_mutual['Variables'], y=df_mutual['Information mutuelle'])
+    ])
+    return fig
 
 def double_histo(variables, title):
     fig = go.Figure()
@@ -107,7 +120,6 @@ layout = html.Div(
          ],
          className ='card',
      ),
-         html.Div(
              html.P(
                  children="On a représenté ici les churns en fonction de la date. Ce graphique met en évidence l'impact très fort qu'a pu avoir les confinements sur le nombre de churn dans les"
                           "mois qui ont suivis. En effet, on passe d'un régime relativement stationnaire et bas au début de la période a un pallier plus élevé au moment du premier confinement "
@@ -115,6 +127,21 @@ layout = html.Div(
                           "encore une fois aux nombreuses restrictions sanitaires, qui ont possiblement plongé de nombreux établissements vers l'inactivités et donc parrallèlement à Churn sur "
                           "Too good to go",
              className="description",
-                ), className="text-box"),
-            ],
-        )])
+                ),
+         html.Div(
+             children=[
+                 dcc.Graph(
+                     id="corr_chart",
+                     figure= corr_chart()
+                 )
+             ],
+         className='card',
+         ),
+         html.P(
+                 children="",
+             className="description",
+                ),
+         ]
+        )
+    ]
+)

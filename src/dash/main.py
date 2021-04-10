@@ -22,7 +22,6 @@ app.layout = html.Div([
     html.Div(id='page-content')
 ])
 
-
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
