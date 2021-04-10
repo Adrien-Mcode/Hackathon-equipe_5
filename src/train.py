@@ -13,6 +13,7 @@ from sklearn.metrics import balanced_accuracy_score, plot_confusion_matrix, \
     recall_score, precision_score, f1_score, accuracy_score
 
 from .feature_importance import compute_feature_importance
+from .plot import plot_feature_importance
 
 
 def do_training(config):
@@ -59,7 +60,7 @@ def eval(df, clf, config, mode="train"):
     import ipdb
     ipdb.set_trace()
     importance_df = compute_feature_importance(clf, df)
-    # fig = plot_feature_importance()
+    fig = plot_feature_importance()
     filename = os.path.join(config.figure_folder, mode + "_confusion_matrix.png")
     fig.savefig(filename)
     mlflow.log_artifact()
