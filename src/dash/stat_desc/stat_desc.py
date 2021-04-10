@@ -9,7 +9,7 @@ from src.dash.app import app
 data = pd.read_csv(r'C:\Users\SURFACE\Documents\GitHub\Hackathon-equipe_5\df_petit.csv')
 data_churn = data.loc[data.target == 1]
 data_cl = data.loc[data.target == 0]
-churn_date=data_churn.group_by('date').sum().target
+churn_date=data_churn.groupby('date').sum().target
 
 def date_churn():
     figure = px.line(
@@ -56,6 +56,8 @@ layout = html.Div(
                       "Commencez par choisir un onglet à visiter :",
             className="header-description",
          ),
+     html.Div(children=[
+         dcc.Graph(
              figure=double_histo('store_segment',
                                  'Graphique représentants le taux de churn en fonction du segment du magasin')),
          html.P(
