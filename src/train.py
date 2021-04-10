@@ -14,7 +14,7 @@ from sklearn.metrics import balanced_accuracy_score, plot_confusion_matrix, \
 
 from .feature_importance import compute_feature_importance
 from .plot import plot_feature_importance
-
+import lightgbm as lgb
 
 def do_training(config):
     run_name = config.model_name + str(config.nrows_train)
@@ -29,16 +29,17 @@ def do_training(config):
         eval(train_preprocess_df, model, config)
 
         our_test_df = get_our_test(config)
-        our_test_preprocess_df = preprocess(our_test_df, config)
+        our_test_preprocess_df, _  = preprocess(our_test_df, config)
         eval(our_test_preprocess_df, model, config, mode="test")
 
 
-def train(train_df, config):
-    inputers = []
+def train(train_df, inputers, config):
     if config.model_type == "logit":
-        inputers.append(("logit", LogisticRegression(class_weight='balanced')))
+        inputers.append(("model", LogisticRegression(class_weight='balanced')))
     elif config.model_type == "rfc":
-        inputers.append(("rfc", RandomForestClassifier()))
+        inputers.append(("model", RandomForestClassifier()))
+    elif config.model_type == "lightgbm":
+        inputers.append(("model", lgb.LGBMClassifier()))
     else:
         clf = None
     clf = Pipeline(inputers).fit(train_df.drop(["target"], axis=1), train_df["target"])
@@ -57,10 +58,8 @@ def eval(df, clf, config, mode="train"):
     filename = os.path.join(config.figure_folder, mode + "_confusion_matrix.png")
     fig.savefig(filename)
     mlflow.log_artifact(filename, "confusion_matrix")
-    import ipdb
-    ipdb.set_trace()
     importance_df = compute_feature_importance(clf, df)
-    fig = plot_feature_importance()
+    fig = plot_feature_importance(clf, df)
     filename = os.path.join(config.figure_folder, mode + "_confusion_matrix.png")
     fig.savefig(filename)
     mlflow.log_artifact()

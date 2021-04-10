@@ -6,3 +6,17 @@ sample_name: dummy_sample
 model_type: logit
 get_new: False
 only_quantitative: True
+target_encoding: False
+kind_imputer: iterative
+qualitative_cols:
+  - 'total_supply'
+  - 'declared_supply'
+  - 'manual_added_supply'
+  - 'manual_removed_supply'
+  - 'meals_saved'
+  - 'consumer_cancellation'
+  - 'store_cancellation'
+  - 'item_price'
+  - 'meals_refunded'
+  - 'rating_count'
+  - 'sum_rating_overall'
