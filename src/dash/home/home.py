@@ -13,8 +13,9 @@ layout = html.Div(
         ),
          html.H1(children="Too Good To Go Analytics", className="header-title"),
          html.P(
-            children="Bienvenue sur Too Good To Go Analytics ! "
-                     "Commencez par choisir un onglet à visiter :",
+            children=["Bienvenue sur Too Good To Go Analytics !",
+                      html.Br(),
+                     "Commencez par choisir un onglet à visiter :"],
             className="header-description",       
          )],
     className="header",
