@@ -12,11 +12,6 @@ python-dateutil = "*"
 python-editor = ">=0.3"
 SQLAlchemy = ">=1.1.0"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "appnope"
 version = "0.1.2"
@@ -24,11 +19,6 @@ description = "Disable App Nap on macOS >= 10.9"
 category = "main"
 optional = false
 python-versions = "*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "azure-core"
@@ -41,11 +31,6 @@ python-versions = "*"
 [package.dependencies]
 requests = ">=2.18.4"
 six = ">=1.11.0"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "azure-storage-blob"
@@ -60,11 +45,6 @@ azure-core = ">=1.10.0,<2.0.0"
 cryptography = ">=2.1.4"
 msrest = ">=0.6.18"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "backcall"
 version = "0.2.0"
@@ -72,11 +52,6 @@ description = "Specifications for callback functions passed in to an API"
 category = "main"
 optional = false
 python-versions = "*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "brotli"
@@ -86,10 +61,21 @@ category = "main"
 optional = false
 python-versions = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
+[[package]]
+name = "category-encoders"
+version = "2.2.2"
+description = "A collection sklearn transformers to encode categorical variables as numeric"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+numpy = ">=1.14.0"
+pandas = ">=0.21.1"
+patsy = ">=0.5.1"
+scikit-learn = ">=0.20.0"
+scipy = ">=1.0.0"
+statsmodels = ">=0.9.0"
 
 [[package]]
 name = "certifi"
@@ -98,11 +84,6 @@ description = "Python package for providing Mozilla's CA Bundle."
 category = "main"
 optional = false
 python-versions = "*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "cffi"
@@ -115,11 +96,6 @@ python-versions = "*"
 [package.dependencies]
 pycparser = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "chardet"
 version = "4.0.0"
@@ -127,11 +103,6 @@ description = "Universal encoding detector for Python 2 and 3"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "click"
@@ -141,11 +112,6 @@ category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "cloudpickle"
 version = "1.6.0"
@@ -154,11 +120,6 @@ category = "main"
 optional = false
 python-versions = ">=3.5"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "colorama"
 version = "0.4.4"
@@ -166,11 +127,6 @@ description = "Cross-platform colored terminal text."
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "cryptography"
@@ -191,11 +147,6 @@ sdist = ["setuptools-rust (>=0.11.4)"]
 ssh = ["bcrypt (>=3.1.5)"]
 test = ["pytest (>=6.0)", "pytest-cov", "pytest-subtests", "pytest-xdist", "pretend", "iso8601", "pytz", "hypothesis (>=1.11.4,!=3.79.2)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "cycler"
 version = "0.10.0"
@@ -207,11 +158,6 @@ python-versions = "*"
 [package.dependencies]
 six = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "cython"
 version = "0.29.22"
@@ -219,11 +165,6 @@ description = "The Cython compiler for writing C extensions for the Python langu
 category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "dash"
@@ -247,11 +188,6 @@ plotly = "*"
 dev = ["dash_flow_example (==0.0.5)", "dash-dangerously-set-inner-html", "flake8 (==3.8.4)", "PyYAML (==5.3.1)", "fire (==0.3.1)", "coloredlogs (==15.0)", "flask-talisman (==0.7.0)", "isort (==4.3.21)", "pylint (==1.9.5)", "mock (==3.0.5)", "virtualenv (==20.2.2)", "mock (==4.0.3)", "black (==19.10b0)", "pylint (==2.6.0)", "astroid (==2.4.2)"]
 testing = ["pytest-sugar (>=0.9.4)", "lxml (>=4.6.2)", "selenium (>=3.141.0)", "percy (>=2.0.2)", "requests[security] (>=2.21.0)", "waitress (>=1.4.4)", "cryptography (<3.4)", "pytest (>=4.6,<5)", "pytest-mock (>=2.0.0,<3)", "beautifulsoup4 (>=4.8.2,<=4.9.3)", "pytest (>=6.0.2)", "pytest-mock (>=3.2.0)", "beautifulsoup4 (>=4.8.2)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "dash-core-components"
 version = "1.16.0"
@@ -259,11 +195,6 @@ description = "Core component suite for Dash"
 category = "main"
 optional = false
 python-versions = "*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "dash-html-components"
@@ -273,11 +204,6 @@ category = "main"
 optional = false
 python-versions = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "dash-renderer"
 version = "1.9.1"
@@ -286,11 +212,6 @@ category = "main"
 optional = false
 python-versions = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "dash-table"
 version = "4.11.3"
@@ -298,11 +219,6 @@ description = "Dash table"
 category = "main"
 optional = false
 python-versions = "*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "databricks-cli"
@@ -318,11 +234,6 @@ requests = ">=2.17.3"
 six = ">=1.10.0"
 tabulate = ">=0.7.7"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "decorator"
 version = "5.0.6"
@@ -330,11 +241,6 @@ description = "Decorators for Humans"
 category = "main"
 optional = false
 python-versions = ">=3.5"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "docker"
@@ -353,11 +259,6 @@ websocket-client = ">=0.32.0"
 ssh = ["paramiko (>=2.4.2)"]
 tls = ["pyOpenSSL (>=17.5.0)", "cryptography (>=3.4.7)", "idna (>=2.0.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "dynamic-yaml"
 version = "1.2.3"
@@ -372,11 +273,6 @@ pyyaml = "5.3.1"
 [package.extras]
 dev = ["twine", "wheel"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "entrypoints"
 version = "0.3"
@@ -384,11 +280,6 @@ description = "Discover and load entry points from installed packages."
 category = "main"
 optional = false
 python-versions = ">=2.7"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "flask"
@@ -409,11 +300,6 @@ dev = ["pytest", "coverage", "tox", "sphinx", "pallets-sphinx-themes", "sphinxco
 docs = ["sphinx", "pallets-sphinx-themes", "sphinxcontrib-log-cabinet", "sphinx-issues"]
 dotenv = ["python-dotenv"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "flask-compress"
 version = "1.9.0"
@@ -426,11 +312,6 @@ python-versions = "*"
 brotli = "*"
 flask = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "future"
 version = "0.18.2"
@@ -438,11 +319,6 @@ description = "Clean single-source support for Python 3 and 2"
 category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "gitdb"
@@ -455,11 +331,6 @@ python-versions = ">=3.4"
 [package.dependencies]
 smmap = ">=3.0.1,<5"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "gitpython"
 version = "3.1.14"
@@ -471,11 +342,6 @@ python-versions = ">=3.4"
 [package.dependencies]
 gitdb = ">=4.0.1,<5"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "greenlet"
 version = "1.0.0"
@@ -486,11 +352,6 @@ python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
 
 [package.extras]
 docs = ["sphinx"]
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "gunicorn"
@@ -506,11 +367,6 @@ gevent = ["gevent (>=1.4.0)"]
 setproctitle = ["setproctitle"]
 tornado = ["tornado (>=0.2)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "idna"
 version = "2.10"
@@ -518,11 +374,6 @@ description = "Internationalized Domain Names in Applications (IDNA)"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "importlib-metadata"
@@ -540,11 +391,6 @@ zipp = ">=0.5"
 docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "packaging", "pep517", "pyfakefs", "flufl.flake8", "pytest-black (>=0.3.7)", "pytest-mypy", "importlib-resources (>=1.3)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "ipdb"
 version = "0.13.4"
@@ -555,11 +401,6 @@ python-versions = ">=2.7"
 
 [package.dependencies]
 ipython = {version = ">=5.1.0", markers = "python_version >= \"3.4\""}
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "ipython"
@@ -592,11 +433,6 @@ parallel = ["ipyparallel"]
 qtconsole = ["qtconsole"]
 test = ["nose (>=0.10.1)", "requests", "testpath", "pygments", "nbformat", "ipykernel", "numpy (>=1.14)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "ipython-genutils"
 version = "0.2.0"
@@ -604,11 +440,6 @@ description = "Vestigial utilities from IPython"
 category = "main"
 optional = false
 python-versions = "*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "isodate"
@@ -621,11 +452,6 @@ python-versions = "*"
 [package.dependencies]
 six = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "itsdangerous"
 version = "1.1.0"
@@ -633,11 +459,6 @@ description = "Various helpers to pass data to untrusted environments and back."
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "jedi"
@@ -654,11 +475,6 @@ parso = ">=0.8.0,<0.9.0"
 qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["Django (<3.1)", "colorama", "docopt", "pytest (<6.0.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "jinja2"
 version = "2.11.3"
@@ -673,11 +489,6 @@ MarkupSafe = ">=0.23"
 [package.extras]
 i18n = ["Babel (>=0.8)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "joblib"
 version = "1.0.1"
@@ -685,11 +496,6 @@ description = "Lightweight pipelining with Python functions"
 category = "main"
 optional = false
 python-versions = ">=3.6"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "kiwisolver"
@@ -699,10 +505,21 @@ category = "main"
 optional = false
 python-versions = ">=3.6"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
+[[package]]
+name = "lightgbm"
+version = "3.2.0"
+description = "LightGBM Python Package"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+numpy = "*"
+scikit-learn = "!=0.22.0"
+scipy = "*"
+
+[package.extras]
+dask = ["dask[array] (>=2.0.0)", "dask[dataframe] (>=2.0.0)", "dask[distributed] (>=2.0.0)", "pandas"]
 
 [[package]]
 name = "llvmlite"
@@ -711,11 +528,6 @@ description = "lightweight wrapper around basic LLVM functionality"
 category = "main"
 optional = false
 python-versions = ">=3.6,<3.10"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "mako"
@@ -732,11 +544,6 @@ MarkupSafe = ">=0.9.2"
 babel = ["babel"]
 lingua = ["lingua"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "markupsafe"
 version = "1.1.1"
@@ -744,11 +551,6 @@ description = "Safely add untrusted strings to HTML/XML markup."
 category = "main"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "matplotlib"
@@ -765,11 +567,6 @@ numpy = ">=1.15"
 pillow = ">=6.2.0"
 pyparsing = ">=2.0.3,<2.0.4 || >2.0.4,<2.1.2 || >2.1.2,<2.1.6 || >2.1.6"
 python-dateutil = ">=2.1"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "mlflow"
@@ -808,11 +605,6 @@ aliyun_oss = ["aliyunstoreplugin"]
 extras = ["scikit-learn", "pyarrow", "boto3", "mleap", "google-cloud-storage", "azureml-core (>=1.2.0)", "pysftp", "kubernetes"]
 sqlserver = ["mlflow-dbstore"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "msrest"
 version = "0.6.21"
@@ -830,11 +622,6 @@ requests-oauthlib = ">=0.5.0"
 [package.extras]
 async = ["aiohttp (>=3.0)", "aiodns"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "munch"
 version = "2.5.0"
@@ -850,11 +637,6 @@ six = "*"
 testing = ["pytest", "coverage", "astroid (>=1.5.3,<1.6.0)", "pylint (>=1.7.2,<1.8.0)", "astroid (>=2.0)", "pylint (>=2.3.1,<2.4.0)"]
 yaml = ["PyYAML (>=5.1.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "numba"
 version = "0.53.1"
@@ -867,11 +649,6 @@ python-versions = ">=3.6,<3.10"
 llvmlite = ">=0.36.0rc1,<0.37"
 numpy = ">=1.15"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "numpy"
 version = "1.19.5"
@@ -879,11 +656,6 @@ description = "NumPy is the fundamental package for array computing with Python.
 category = "main"
 optional = false
 python-versions = ">=3.6"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "oauthlib"
@@ -897,11 +669,6 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 rsa = ["cryptography"]
 signals = ["blinker"]
 signedtoken = ["cryptography", "pyjwt (>=1.0.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "pandas"
@@ -919,11 +686,6 @@ pytz = ">=2017.2"
 [package.extras]
 test = ["pytest (>=4.0.2)", "pytest-xdist", "hypothesis (>=3.58)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "parso"
 version = "0.8.2"
@@ -936,10 +698,17 @@ python-versions = ">=3.6"
 qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["docopt", "pytest (<6.0.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
+[[package]]
+name = "patsy"
+version = "0.5.1"
+description = "A Python package for describing statistical models and for building design matrices."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+numpy = ">=1.4"
+six = "*"
 
 [[package]]
 name = "pexpect"
@@ -952,11 +721,6 @@ python-versions = "*"
 [package.dependencies]
 ptyprocess = ">=0.5"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "pickleshare"
 version = "0.7.5"
@@ -965,11 +729,6 @@ category = "main"
 optional = false
 python-versions = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "pillow"
 version = "8.2.0"
@@ -977,11 +736,6 @@ description = "Python Imaging Library (Fork)"
 category = "main"
 optional = false
 python-versions = ">=3.6"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "plotly"
@@ -995,11 +749,6 @@ python-versions = "*"
 retrying = ">=1.3.3"
 six = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "prometheus-client"
 version = "0.10.1"
@@ -1010,11 +759,6 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.extras]
 twisted = ["twisted"]
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "prometheus-flask-exporter"
@@ -1028,11 +772,6 @@ python-versions = "*"
 flask = "*"
 prometheus_client = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "prompt-toolkit"
 version = "3.0.18"
@@ -1043,11 +782,6 @@ python-versions = ">=3.6.1"
 
 [package.dependencies]
 wcwidth = "*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "protobuf"
@@ -1060,11 +794,6 @@ python-versions = "*"
 [package.dependencies]
 six = ">=1.9"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "psycopg2"
 version = "2.8.6"
@@ -1072,11 +801,6 @@ description = "psycopg2 - Python-PostgreSQL Database Adapter"
 category = "main"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "ptyprocess"
@@ -1086,11 +810,6 @@ category = "main"
 optional = false
 python-versions = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "pycparser"
 version = "2.20"
@@ -1098,11 +817,6 @@ description = "C parser in Python"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "pygments"
@@ -1112,11 +826,6 @@ category = "main"
 optional = false
 python-versions = ">=3.5"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "pyparsing"
 version = "2.4.7"
@@ -1124,11 +833,6 @@ description = "Python parsing module"
 category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "python-dateutil"
@@ -1141,11 +845,6 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
 [package.dependencies]
 six = ">=1.5"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "python-editor"
 version = "1.0.4"
@@ -1153,11 +852,6 @@ description = "Programmatically open an editor, capture the result."
 category = "main"
 optional = false
 python-versions = "*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "pytz"
@@ -1167,11 +861,6 @@ category = "main"
 optional = false
 python-versions = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "pywin32"
 version = "227"
@@ -1180,23 +869,13 @@ category = "main"
 optional = false
 python-versions = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "pyyaml"
 version = "5.3.1"
 description = "YAML parser and emitter for Python"
 category = "main"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
+python-versions = "*"
 
 [[package]]
 name = "querystring-parser"
@@ -1208,11 +887,6 @@ python-versions = "*"
 
 [package.dependencies]
 six = "*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "requests"
@@ -1232,11 +906,6 @@ urllib3 = ">=1.21.1,<1.27"
 security = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)"]
 socks = ["PySocks (>=1.5.6,!=1.5.7)", "win-inet-pton"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "requests-oauthlib"
 version = "1.3.0"
@@ -1252,11 +921,6 @@ requests = ">=2.0.0"
 [package.extras]
 rsa = ["oauthlib[signedtoken] (>=3.0.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "retrying"
 version = "1.3.3"
@@ -1267,11 +931,6 @@ python-versions = "*"
 
 [package.dependencies]
 six = ">=1.7.0"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "scikit-learn"
@@ -1287,10 +946,11 @@ numpy = ">=1.13.3"
 scipy = ">=0.19.1"
 threadpoolctl = ">=2.0.0"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
+[package.extras]
+benchmark = ["matplotlib (>=2.1.1)", "pandas (>=0.25.0)", "memory-profiler (>=0.57.0)"]
+docs = ["matplotlib (>=2.1.1)", "scikit-image (>=0.13)", "pandas (>=0.25.0)", "seaborn (>=0.9.0)", "memory-profiler (>=0.57.0)", "sphinx (>=3.2.0)", "sphinx-gallery (>=0.7.0)", "numpydoc (>=1.0.0)", "Pillow (>=7.1.2)", "sphinx-prompt (>=1.3.0)"]
+examples = ["matplotlib (>=2.1.1)", "scikit-image (>=0.13)", "pandas (>=0.25.0)", "seaborn (>=0.9.0)"]
+tests = ["matplotlib (>=2.1.1)", "scikit-image (>=0.13)", "pandas (>=0.25.0)", "pytest (>=5.0.1)", "pytest-cov (>=2.9.0)", "flake8 (>=3.8.2)", "mypy (>=0.770)", "pyamg (>=4.0.0)"]
 
 [[package]]
 name = "scipy"
@@ -1302,11 +962,6 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 numpy = ">=1.14.5"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "seaborn"
@@ -1321,11 +976,6 @@ matplotlib = ">=2.2"
 numpy = ">=1.15"
 pandas = ">=0.23"
 scipy = ">=1.0"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "shap"
@@ -1352,11 +1002,6 @@ others = ["lime"]
 plots = ["matplotlib", "ipython"]
 test = ["pytest", "pytest-mpl", "pytest-cov", "xgboost", "lightgbm", "catboost", "pyspark", "pyod", "transformers", "torch", "sentencepiece", "opencv-python"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "six"
 version = "1.15.0"
@@ -1364,11 +1009,6 @@ description = "Python 2 and 3 compatibility utilities"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "slicer"
@@ -1378,11 +1018,6 @@ category = "main"
 optional = false
 python-versions = ">=3.6"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "smmap"
 version = "4.0.0"
@@ -1391,14 +1026,9 @@ category = "main"
 optional = false
 python-versions = ">=3.5"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "sqlalchemy"
-version = "1.4.6"
+version = "1.4.7"
 description = "Database Abstraction Library"
 category = "main"
 optional = false
@@ -1428,11 +1058,6 @@ postgresql_psycopg2cffi = ["psycopg2cffi"]
 pymysql = ["pymysql (<1)", "pymysql"]
 sqlcipher = ["sqlcipher3-binary"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "sqlparse"
 version = "0.4.1"
@@ -1441,10 +1066,24 @@ category = "main"
 optional = false
 python-versions = ">=3.5"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
+[[package]]
+name = "statsmodels"
+version = "0.12.2"
+description = "Statistical computations and models for Python"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+numpy = ">=1.15"
+pandas = ">=0.21"
+patsy = ">=0.5"
+scipy = ">=1.1"
+
+[package.extras]
+build = ["cython (>=0.29)"]
+develop = ["cython (>=0.29)"]
+docs = ["sphinx", "nbconvert", "jupyter-client", "ipykernel", "matplotlib", "nbformat", "numpydoc", "pandas-datareader"]
 
 [[package]]
 name = "tabulate"
@@ -1457,11 +1096,6 @@ python-versions = "*"
 [package.extras]
 widechars = ["wcwidth"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "threadpoolctl"
 version = "2.1.0"
@@ -1469,11 +1103,6 @@ description = "threadpoolctl"
 category = "main"
 optional = false
 python-versions = ">=3.5"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "tqdm"
@@ -1487,11 +1116,6 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
 dev = ["py-make (>=0.1.0)", "twine", "wheel"]
 notebook = ["ipywidgets (>=6)"]
 telegram = ["requests"]
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "traitlets"
@@ -1509,11 +1133,6 @@ six = "*"
 [package.extras]
 test = ["pytest", "mock"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "typing-extensions"
 version = "3.7.4.3"
@@ -1521,11 +1140,6 @@ description = "Backported and Experimental Type Hints for Python 3.5+"
 category = "main"
 optional = false
 python-versions = "*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "urllib3"
@@ -1540,11 +1154,6 @@ secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "cer
 socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 brotli = ["brotlipy (>=0.6.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "waitress"
 version = "2.0.0"
@@ -1557,11 +1166,6 @@ python-versions = ">=3.6.0"
 docs = ["Sphinx (>=1.8.1)", "docutils", "pylons-sphinx-themes (>=1.0.9)"]
 testing = ["pytest", "pytest-cover", "coverage (>=5.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "wcwidth"
 version = "0.2.5"
@@ -1569,11 +1173,6 @@ description = "Measures the displayed width of unicode strings in a terminal"
 category = "main"
 optional = false
 python-versions = "*"
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "websocket-client"
@@ -1586,11 +1185,6 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 [package.dependencies]
 six = "*"
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "werkzeug"
 version = "1.0.1"
@@ -1602,11 +1196,6 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 [package.extras]
 dev = ["pytest", "pytest-timeout", "coverage", "tox", "sphinx", "pallets-sphinx-themes", "sphinx-issues"]
 watchdog = ["watchdog"]
-
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
 
 [[package]]
 name = "xgboost"
@@ -1627,11 +1216,6 @@ pandas = ["pandas"]
 plotting = ["graphviz", "matplotlib"]
 scikit-learn = ["scikit-learn"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [[package]]
 name = "zipp"
 version = "3.4.1"
@@ -1644,15 +1228,10 @@ python-versions = ">=3.6"
 docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-cov", "pytest-enabler", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
-[package.source]
-type = "legacy"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple"
-reference = "sncf"
-
 [metadata]
 lock-version = "1.1"
-python-versions = "3.6.8"
-content-hash = "1dfb4b70b332bd3cbf65bb5f87f95d259500a93efc026a131a02b80e72800c55"
+python-versions = "3.6.13"
+content-hash = "3819c2b09679a75c8511cbd54471ea6052a6594e6eb47e4325eccf18deee5cdb"
 
 [metadata.files]
 alembic = [
@@ -1707,6 +1286,10 @@ brotli = [
     {file = "Brotli-1.0.9-cp39-cp39-win32.whl", hash = "sha256:cfc391f4429ee0a9370aa93d812a52e1fee0f37a81861f4fdd1f4fb28e8547c3"},
     {file = "Brotli-1.0.9-cp39-cp39-win_amd64.whl", hash = "sha256:854c33dad5ba0fbd6ab69185fec8dab89e13cda6b7d191ba111987df74f38761"},
     {file = "Brotli-1.0.9.zip", hash = "sha256:4d1b810aa0ed773f81dceda2cc7b403d01057458730e309856356d4ef4188438"},
+]
+category-encoders = [
+    {file = "category_encoders-2.2.2-py2.py3-none-any.whl", hash = "sha256:3704d140d873c1325e68051ab2dce9663fd57c77fb1c368b9dc02e82e80c176a"},
+    {file = "category_encoders-2.2.2.tar.gz", hash = "sha256:79651dc3e8cd6749bc5d404c49a79e93469016d106736326842305e076136cb0"},
 ]
 certifi = [
     {file = "certifi-2020.12.5-py2.py3-none-any.whl", hash = "sha256:719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"},
@@ -1992,6 +1575,13 @@ kiwisolver = [
     {file = "kiwisolver-1.3.1-pp36-pypy36_pp73-win32.whl", hash = "sha256:401a2e9afa8588589775fe34fc22d918ae839aaaf0c0e96441c0fdbce6d8ebe6"},
     {file = "kiwisolver-1.3.1.tar.gz", hash = "sha256:950a199911a8d94683a6b10321f9345d5a3a8433ec58b217ace979e18f16e248"},
 ]
+lightgbm = [
+    {file = "lightgbm-3.2.0-py3-none-macosx_10_14_x86_64.macosx_10_15_x86_64.macosx_11_0_x86_64.whl", hash = "sha256:9971379265d02e11dbb8afb562e1e23847a7e1a8892424aa4c66062b70322259"},
+    {file = "lightgbm-3.2.0-py3-none-manylinux1_x86_64.whl", hash = "sha256:861399951901d75e22934d8c41b4ea2867c38e934a7ea1261a1aa89edddc0e3f"},
+    {file = "lightgbm-3.2.0-py3-none-manylinux2014_aarch64.whl", hash = "sha256:ecddd143666b0ab2fa109eeb18737180cad9a7a98b99f84c98fb61b1c2983260"},
+    {file = "lightgbm-3.2.0-py3-none-win_amd64.whl", hash = "sha256:81ac81376b6cdac82a61024d858dd08d1e7e9a1756dd95b94dc4279d94b1323b"},
+    {file = "lightgbm-3.2.0.tar.gz", hash = "sha256:000c6e0e225834a8a94a84571cf41e4b7c7b97a0db6d286c1237de8ba6066726"},
+]
 llvmlite = [
     {file = "llvmlite-0.36.0-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:cc0f9b9644b4ab0e4a5edb17f1531d791630c88858220d3cc688d6edf10da100"},
     {file = "llvmlite-0.36.0-cp36-cp36m-manylinux2010_i686.whl", hash = "sha256:f7918dbac02b1ebbfd7302ad8e8307d7877ab57d782d5f04b70ff9696b53c21b"},
@@ -2016,6 +1606,7 @@ llvmlite = [
     {file = "llvmlite-0.36.0.tar.gz", hash = "sha256:765128fdf5f149ed0b889ffbe2b05eb1717f8e20a5c87fa2b4018fbcce0fcfc9"},
 ]
 mako = [
+    {file = "Mako-1.1.4-py2.py3-none-any.whl", hash = "sha256:aea166356da44b9b830c8023cd9b557fa856bd8b4035d6de771ca027dfc5cc6e"},
     {file = "Mako-1.1.4.tar.gz", hash = "sha256:17831f0b7087c313c0ffae2bcbbd3c1d5ba9eeac9c38f2eb7b50e8c99fe9d5ab"},
 ]
 markupsafe = [
@@ -2037,20 +1628,39 @@ markupsafe = [
     {file = "MarkupSafe-1.1.1-cp35-cp35m-win32.whl", hash = "sha256:6dd73240d2af64df90aa7c4e7481e23825ea70af4b4922f8ede5b9e35f78a3b1"},
     {file = "MarkupSafe-1.1.1-cp35-cp35m-win_amd64.whl", hash = "sha256:9add70b36c5666a2ed02b43b335fe19002ee5235efd4b8a89bfcf9005bebac0d"},
     {file = "MarkupSafe-1.1.1-cp36-cp36m-macosx_10_6_intel.whl", hash = "sha256:24982cc2533820871eba85ba648cd53d8623687ff11cbb805be4ff7b4c971aff"},
+    {file = "MarkupSafe-1.1.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:d53bc011414228441014aa71dbec320c66468c1030aae3a6e29778a3382d96e5"},
     {file = "MarkupSafe-1.1.1-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:00bc623926325b26bb9605ae9eae8a215691f33cae5df11ca5424f06f2d1f473"},
     {file = "MarkupSafe-1.1.1-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:717ba8fe3ae9cc0006d7c451f0bb265ee07739daf76355d06366154ee68d221e"},
+    {file = "MarkupSafe-1.1.1-cp36-cp36m-manylinux2010_i686.whl", hash = "sha256:3b8a6499709d29c2e2399569d96719a1b21dcd94410a586a18526b143ec8470f"},
+    {file = "MarkupSafe-1.1.1-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:84dee80c15f1b560d55bcfe6d47b27d070b4681c699c572af2e3c7cc90a3b8e0"},
+    {file = "MarkupSafe-1.1.1-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:b1dba4527182c95a0db8b6060cc98ac49b9e2f5e64320e2b56e47cb2831978c7"},
     {file = "MarkupSafe-1.1.1-cp36-cp36m-win32.whl", hash = "sha256:535f6fc4d397c1563d08b88e485c3496cf5784e927af890fb3c3aac7f933ec66"},
     {file = "MarkupSafe-1.1.1-cp36-cp36m-win_amd64.whl", hash = "sha256:b1282f8c00509d99fef04d8ba936b156d419be841854fe901d8ae224c59f0be5"},
     {file = "MarkupSafe-1.1.1-cp37-cp37m-macosx_10_6_intel.whl", hash = "sha256:8defac2f2ccd6805ebf65f5eeb132adcf2ab57aa11fdf4c0dd5169a004710e7d"},
+    {file = "MarkupSafe-1.1.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:bf5aa3cbcfdf57fa2ee9cd1822c862ef23037f5c832ad09cfea57fa846dec193"},
     {file = "MarkupSafe-1.1.1-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:46c99d2de99945ec5cb54f23c8cd5689f6d7177305ebff350a58ce5f8de1669e"},
     {file = "MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:ba59edeaa2fc6114428f1637ffff42da1e311e29382d81b339c1817d37ec93c6"},
+    {file = "MarkupSafe-1.1.1-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:6fffc775d90dcc9aed1b89219549b329a9250d918fd0b8fa8d93d154918422e1"},
+    {file = "MarkupSafe-1.1.1-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:a6a744282b7718a2a62d2ed9d993cad6f5f585605ad352c11de459f4108df0a1"},
+    {file = "MarkupSafe-1.1.1-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:195d7d2c4fbb0ee8139a6cf67194f3973a6b3042d742ebe0a9ed36d8b6f0c07f"},
     {file = "MarkupSafe-1.1.1-cp37-cp37m-win32.whl", hash = "sha256:b00c1de48212e4cc9603895652c5c410df699856a2853135b3967591e4beebc2"},
     {file = "MarkupSafe-1.1.1-cp37-cp37m-win_amd64.whl", hash = "sha256:9bf40443012702a1d2070043cb6291650a0841ece432556f784f004937f0f32c"},
     {file = "MarkupSafe-1.1.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:6788b695d50a51edb699cb55e35487e430fa21f1ed838122d722e0ff0ac5ba15"},
     {file = "MarkupSafe-1.1.1-cp38-cp38-manylinux1_i686.whl", hash = "sha256:cdb132fc825c38e1aeec2c8aa9338310d29d337bebbd7baa06889d09a60a1fa2"},
     {file = "MarkupSafe-1.1.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:13d3144e1e340870b25e7b10b98d779608c02016d5184cfb9927a9f10c689f42"},
+    {file = "MarkupSafe-1.1.1-cp38-cp38-manylinux2010_i686.whl", hash = "sha256:acf08ac40292838b3cbbb06cfe9b2cb9ec78fce8baca31ddb87aaac2e2dc3bc2"},
+    {file = "MarkupSafe-1.1.1-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:d9be0ba6c527163cbed5e0857c451fcd092ce83947944d6c14bc95441203f032"},
+    {file = "MarkupSafe-1.1.1-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:caabedc8323f1e93231b52fc32bdcde6db817623d33e100708d9a68e1f53b26b"},
     {file = "MarkupSafe-1.1.1-cp38-cp38-win32.whl", hash = "sha256:596510de112c685489095da617b5bcbbac7dd6384aeebeda4df6025d0256a81b"},
     {file = "MarkupSafe-1.1.1-cp38-cp38-win_amd64.whl", hash = "sha256:e8313f01ba26fbbe36c7be1966a7b7424942f670f38e666995b88d012765b9be"},
+    {file = "MarkupSafe-1.1.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:d73a845f227b0bfe8a7455ee623525ee656a9e2e749e4742706d80a6065d5e2c"},
+    {file = "MarkupSafe-1.1.1-cp39-cp39-manylinux1_i686.whl", hash = "sha256:98bae9582248d6cf62321dcb52aaf5d9adf0bad3b40582925ef7c7f0ed85fceb"},
+    {file = "MarkupSafe-1.1.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:2beec1e0de6924ea551859edb9e7679da6e4870d32cb766240ce17e0a0ba2014"},
+    {file = "MarkupSafe-1.1.1-cp39-cp39-manylinux2010_i686.whl", hash = "sha256:7fed13866cf14bba33e7176717346713881f56d9d2bcebab207f7a036f41b850"},
+    {file = "MarkupSafe-1.1.1-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:6f1e273a344928347c1290119b493a1f0303c52f5a5eae5f16d74f48c15d4a85"},
+    {file = "MarkupSafe-1.1.1-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:feb7b34d6325451ef96bc0e36e1a6c0c1c64bc1fbec4b854f4529e51887b1621"},
+    {file = "MarkupSafe-1.1.1-cp39-cp39-win32.whl", hash = "sha256:22c178a091fc6630d0d045bdb5992d2dfe14e3259760e713c490da5323866c39"},
+    {file = "MarkupSafe-1.1.1-cp39-cp39-win_amd64.whl", hash = "sha256:b7d644ddb4dbd407d31ffb699f1d140bc35478da613b441c582aeb7c43838dd8"},
     {file = "MarkupSafe-1.1.1.tar.gz", hash = "sha256:29872e92839765e546828bb7754a68c418d927cd064fd4708fab9fe9c8bb116b"},
 ]
 matplotlib = [
@@ -2185,6 +1795,10 @@ parso = [
     {file = "parso-0.8.2-py2.py3-none-any.whl", hash = "sha256:a8c4922db71e4fdb90e0d0bc6e50f9b273d3397925e5e60a717e719201778d22"},
     {file = "parso-0.8.2.tar.gz", hash = "sha256:12b83492c6239ce32ff5eed6d3639d6a536170723c6f3f1506869f1ace413398"},
 ]
+patsy = [
+    {file = "patsy-0.5.1-py2.py3-none-any.whl", hash = "sha256:5465be1c0e670c3a965355ec09e9a502bf2c4cbe4875e8528b0221190a8a5d40"},
+    {file = "patsy-0.5.1.tar.gz", hash = "sha256:f115cec4201e1465cd58b9866b0b0e7b941caafec129869057405bfe5b5e3991"},
+]
 pexpect = [
     {file = "pexpect-4.8.0-py2.py3-none-any.whl", hash = "sha256:0b48a55dcb3c05f3329815901ea4fc1537514d6ba867a152b581d69ae3710937"},
     {file = "pexpect-4.8.0.tar.gz", hash = "sha256:fc65a43959d153d0114afe13997d439c22823a27cefceb5ff35c2178c6784c0c"},
@@ -2305,7 +1919,9 @@ python-dateutil = [
 python-editor = [
     {file = "python-editor-1.0.4.tar.gz", hash = "sha256:51fda6bcc5ddbbb7063b2af7509e43bd84bfc32a4ff71349ec7847713882327b"},
     {file = "python_editor-1.0.4-py2-none-any.whl", hash = "sha256:5f98b069316ea1c2ed3f67e7f5df6c0d8f10b689964a4a811ff64f0106819ec8"},
+    {file = "python_editor-1.0.4-py2.7.egg", hash = "sha256:ea87e17f6ec459e780e4221f295411462e0d0810858e055fc514684350a2f522"},
     {file = "python_editor-1.0.4-py3-none-any.whl", hash = "sha256:1bf6e860a8ad52a14c3ee1252d5dc25b2030618ed80c022598f00176adc8367d"},
+    {file = "python_editor-1.0.4-py3.5.egg", hash = "sha256:c3da2053dbab6b29c94e43c486ff67206eafbe7eb52dbec7390b5e2fb05aac77"},
 ]
 pytz = [
     {file = "pytz-2021.1-py2.py3-none-any.whl", hash = "sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798"},
@@ -2351,6 +1967,7 @@ requests = [
 requests-oauthlib = [
     {file = "requests-oauthlib-1.3.0.tar.gz", hash = "sha256:b4261601a71fd721a8bd6d7aa1cc1d6a8a93b4a9f5e96626f8e4d91e8beeaa6a"},
     {file = "requests_oauthlib-1.3.0-py2.py3-none-any.whl", hash = "sha256:7f71572defaecd16372f9006f33c2ec8c077c3cfa6f5911a9a90202beb513f3d"},
+    {file = "requests_oauthlib-1.3.0-py3.7.egg", hash = "sha256:fa6c47b933f01060936d87ae9327fead68768b69c6c9ea2109c48be30f2d4dbc"},
 ]
 retrying = [
     {file = "retrying-1.3.3.tar.gz", hash = "sha256:08c039560a6da2fe4f2c426d0766e284d3b736e355f8dd24b37367b0bb41973b"},
@@ -2362,6 +1979,7 @@ scikit-learn = [
     {file = "scikit_learn-0.24.1-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:c658432d8a20e95398f6bb95ff9731ce9dfa343fdf21eea7ec6a7edfacd4b4d9"},
     {file = "scikit_learn-0.24.1-cp36-cp36m-manylinux2010_i686.whl", hash = "sha256:9dfa564ef27e8e674aa1cc74378416d580ac4ede1136c13dd555a87996e13422"},
     {file = "scikit_learn-0.24.1-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:9c6097b6a9b2bafc5e0f31f659e6ab5e131383209c30c9e978c5b8abdac5ed2a"},
+    {file = "scikit_learn-0.24.1-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:5580eba7345a4d3b097be2f067cc71a306c44bab19e8717a30361f279c929bea"},
     {file = "scikit_learn-0.24.1-cp36-cp36m-win32.whl", hash = "sha256:7b04691eb2f41d2c68dbda8d1bd3cb4ef421bdc43aaa56aeb6c762224552dfb6"},
     {file = "scikit_learn-0.24.1-cp36-cp36m-win_amd64.whl", hash = "sha256:1adf483e91007a87171d7ce58c34b058eb5dab01b5fee6052f15841778a8ecd8"},
     {file = "scikit_learn-0.24.1-cp37-cp37m-macosx_10_13_x86_64.whl", hash = "sha256:ddb52d088889f5596bc4d1de981f2eca106b58243b6679e4782f3ba5096fd645"},
@@ -2369,6 +1987,7 @@ scikit-learn = [
     {file = "scikit_learn-0.24.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:0567a2d29ad08af98653300c623bd8477b448fe66ced7198bef4ed195925f082"},
     {file = "scikit_learn-0.24.1-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:99349d77f54e11f962d608d94dfda08f0c9e5720d97132233ebdf35be2858b2d"},
     {file = "scikit_learn-0.24.1-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:83b21ff053b1ff1c018a2d24db6dd3ea339b1acfbaa4d9c881731f43748d8b3b"},
+    {file = "scikit_learn-0.24.1-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:abe835a851610f87201819cb315f8d554e1a3e8128912783a31e87264ba5ffb7"},
     {file = "scikit_learn-0.24.1-cp37-cp37m-win32.whl", hash = "sha256:c3deb3b19dd9806acf00cf0d400e84562c227723013c33abefbbc3cf906596e9"},
     {file = "scikit_learn-0.24.1-cp37-cp37m-win_amd64.whl", hash = "sha256:d54dbaadeb1425b7d6a66bf44bee2bb2b899fe3e8850b8e94cfb9c904dcb46d0"},
     {file = "scikit_learn-0.24.1-cp38-cp38-macosx_10_13_x86_64.whl", hash = "sha256:3c4f07f47c04e81b134424d53c3f5e16dfd7f494e44fd7584ba9ce9de2c5e6c1"},
@@ -2376,6 +1995,7 @@ scikit-learn = [
     {file = "scikit_learn-0.24.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:4ddd2b6f7449a5d539ff754fa92d75da22de261fd8fdcfb3596799fadf255101"},
     {file = "scikit_learn-0.24.1-cp38-cp38-manylinux2010_i686.whl", hash = "sha256:826b92bf45b8ad80444814e5f4ac032156dd481e48d7da33d611f8fe96d5f08b"},
     {file = "scikit_learn-0.24.1-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:259ec35201e82e2db1ae2496f229e63f46d7f1695ae68eef9350b00dc74ba52f"},
+    {file = "scikit_learn-0.24.1-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:9599a3f3bf33f73fed0fe06d1dfa4e6081365a58c1c807acb07271be0dce9733"},
     {file = "scikit_learn-0.24.1-cp38-cp38-win32.whl", hash = "sha256:8772b99d683be8f67fcc04789032f1b949022a0e6880ee7b75a7ec97dbbb5d0b"},
     {file = "scikit_learn-0.24.1-cp38-cp38-win_amd64.whl", hash = "sha256:ed9d65594948678827f4ff0e7ae23344e2f2b4cabbca057ccaed3118fdc392ca"},
     {file = "scikit_learn-0.24.1-cp39-cp39-macosx_10_13_x86_64.whl", hash = "sha256:8aa1b3ac46b80eaa552b637eeadbbce3be5931e4b5002b964698e33a1b589e1e"},
@@ -2383,6 +2003,7 @@ scikit-learn = [
     {file = "scikit_learn-0.24.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:087dfede39efb06ab30618f9ab55a0397f29c38d63cd0ab88d12b500b7d65fd7"},
     {file = "scikit_learn-0.24.1-cp39-cp39-manylinux2010_i686.whl", hash = "sha256:895dbf2030aa7337649e36a83a007df3c9811396b4e2fa672a851160f36ce90c"},
     {file = "scikit_learn-0.24.1-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:9a24d1ccec2a34d4cd3f2a1f86409f3f5954cc23d4d2270ba0d03cf018aa4780"},
+    {file = "scikit_learn-0.24.1-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:54be0a60a5a35005ad69c75902e0f5c9f699db4547ead427e97ef881c3242e6f"},
     {file = "scikit_learn-0.24.1-cp39-cp39-win32.whl", hash = "sha256:fab31f48282ebf54dd69f6663cd2d9800096bad1bb67bbc9c9ac84eb77b41972"},
     {file = "scikit_learn-0.24.1-cp39-cp39-win_amd64.whl", hash = "sha256:4562dcf4793e61c5d0f89836d07bc37521c3a1889da8f651e2c326463c4bd697"},
 ]
@@ -2436,44 +2057,67 @@ smmap = [
     {file = "smmap-4.0.0.tar.gz", hash = "sha256:7e65386bd122d45405ddf795637b7f7d2b532e7e401d46bbe3fb49b9986d5182"},
 ]
 sqlalchemy = [
-    {file = "SQLAlchemy-1.4.6-cp27-cp27m-macosx_10_14_x86_64.whl", hash = "sha256:432e98e6fe0d24e8181eb4177e59cba9f8831dcaf272a0d2de75bc8b933952a0"},
-    {file = "SQLAlchemy-1.4.6-cp27-cp27m-manylinux1_x86_64.whl", hash = "sha256:534c71caa87c7fdb136ce5073fb42b732a4eb390946f503d8e1d7ce6a4a79100"},
-    {file = "SQLAlchemy-1.4.6-cp27-cp27m-win32.whl", hash = "sha256:4eeff8b12c7d22be4de98721bba5a042875f4365e9fd20dc3916eec474ccb81e"},
-    {file = "SQLAlchemy-1.4.6-cp27-cp27m-win_amd64.whl", hash = "sha256:e5267cd2e51ddefbe10bb182c36ba41cdaa51c83a0fdfa63ed8cbe89cbcf0f33"},
-    {file = "SQLAlchemy-1.4.6-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:66467123c220689d55c6d51fdf88f7b0b62b8078823c5f6c0297ab47c22003d7"},
-    {file = "SQLAlchemy-1.4.6-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:933427a5474e014d01bac93224cd4e2bc7bbc7ce531d0bd7e55e4f940cc8ce0d"},
-    {file = "SQLAlchemy-1.4.6-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:43fef20dd1024409375cc646a4b5afaffb62f6488e41588cde2a1ed2e9432b5b"},
-    {file = "SQLAlchemy-1.4.6-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:8a296bbf367867aee2ea8d5b391cb04fbdb3ca7277cd1649d9e8114620f3b090"},
-    {file = "SQLAlchemy-1.4.6-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:2e65c1146f5b4151cc6e553d9847299c97f53640d94ba88b1c534e15cdc6ac38"},
-    {file = "SQLAlchemy-1.4.6-cp36-cp36m-manylinux2014_x86_64.whl", hash = "sha256:88d75ea6b4330a6f5596a49904f21762ff89ca763db065d63b815ad8c3d68952"},
-    {file = "SQLAlchemy-1.4.6-cp36-cp36m-win32.whl", hash = "sha256:a69787f7fc87b84df7e2f27158476cdf39a79ebb95af1d6f696e474724af9ebe"},
-    {file = "SQLAlchemy-1.4.6-cp36-cp36m-win_amd64.whl", hash = "sha256:21becd8b45ec70b703239cf915104e47889c2aad96d0f68f597b9b547cbfd787"},
-    {file = "SQLAlchemy-1.4.6-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:c719f0058951457a7761bb69c2e47781a9989ab4819b7a30b6b39141ad013a5f"},
-    {file = "SQLAlchemy-1.4.6-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:a76c10b467f7d385e4cffe2185d975336acf0dbf24ed702c46207df0fb64055e"},
-    {file = "SQLAlchemy-1.4.6-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:a687e552ab4ffedcf3ec3bd5256ab3e753b4f605b467e9fa39690b2dadb5f607"},
-    {file = "SQLAlchemy-1.4.6-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:013b659efe02f0f58e7f759602584899c921c178c6a972978f16460dcdd782d5"},
-    {file = "SQLAlchemy-1.4.6-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:6c4af3aceeff6a0e2bd3657d8b25714a9f7c7c606e7ec52029284973094f84c1"},
-    {file = "SQLAlchemy-1.4.6-cp37-cp37m-win32.whl", hash = "sha256:2a042c27b1a32a87f4cead53bcdd28999324992650896094368a595165b31d97"},
-    {file = "SQLAlchemy-1.4.6-cp37-cp37m-win_amd64.whl", hash = "sha256:4387ebd5ae8bc2c716dbfc1ece769c867307eeecc192e72a4d2e7fa0fc092646"},
-    {file = "SQLAlchemy-1.4.6-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:7d252dea33c1ee07b3d702fb4962963996ea40e5a2615dbe7646ccabd851ac76"},
-    {file = "SQLAlchemy-1.4.6-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:d7684e0598acfbfb5110bea482d8c5e94f52001d6d66b5558177f41f49fb5930"},
-    {file = "SQLAlchemy-1.4.6-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:cc3c0d87b11ae1dd1ccbd6fc7875a290b3f73b771254180c2e7b19c2aec7379b"},
-    {file = "SQLAlchemy-1.4.6-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:d42b8e2bffdf9e01d66cf46472b938493b854ea790a0fbe2e2e42624fc253b33"},
-    {file = "SQLAlchemy-1.4.6-cp38-cp38-manylinux2014_x86_64.whl", hash = "sha256:360a771b538463053383fb6ff7aceffb595248d7059bb9e003bf70562a66510d"},
-    {file = "SQLAlchemy-1.4.6-cp38-cp38-win32.whl", hash = "sha256:86a7321636f851c6e8009901c5d67e97d82b86ee8c6f28a476691c41c3d71a95"},
-    {file = "SQLAlchemy-1.4.6-cp38-cp38-win_amd64.whl", hash = "sha256:bdeb300bb9adc02f98957cd0cf0c38d641bdd435b0927e39870a772e0a750bc0"},
-    {file = "SQLAlchemy-1.4.6-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:4d71ee83441826fb48771e58cef51191500a87734b4acb6b698ca018479395bd"},
-    {file = "SQLAlchemy-1.4.6-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:93f6fe67a76d7fa1cca3b9febb36e9f2dd76055230e2bfa317969532f34c03ab"},
-    {file = "SQLAlchemy-1.4.6-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:345c201324066b789804411f07eea750e9f29872be052eba221ce76add647d50"},
-    {file = "SQLAlchemy-1.4.6-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:2071ee6cd9390a9527a80ef03458fb58e0166bb299db2c62f9d688b6772d76a1"},
-    {file = "SQLAlchemy-1.4.6-cp39-cp39-manylinux2014_x86_64.whl", hash = "sha256:cadb58aeadd9916e79e8f99a49d0c0a9e61ae2b24469c2b304a0699e41a25e59"},
-    {file = "SQLAlchemy-1.4.6-cp39-cp39-win32.whl", hash = "sha256:2713b338d9c54d2c3c7ff4f7786a40a5ca85013c8ccea00327b034d42598e22e"},
-    {file = "SQLAlchemy-1.4.6-cp39-cp39-win_amd64.whl", hash = "sha256:b093bd6efb49332021714bed5752e784a34ae6d6896ec56ffdc32cc83275a215"},
-    {file = "SQLAlchemy-1.4.6.tar.gz", hash = "sha256:193c3ca465fbc68de071995a461ab535466f041089d372ee6a6f0aae7b9307e6"},
+    {file = "SQLAlchemy-1.4.7-cp27-cp27m-macosx_10_14_x86_64.whl", hash = "sha256:e9c2aaaa9738ba3334262734bd25d9b2d6ea446400f815bbdea17571b9e6d8fb"},
+    {file = "SQLAlchemy-1.4.7-cp27-cp27m-manylinux1_x86_64.whl", hash = "sha256:94fece3fdc777fbf37378513414bcf19ae89e1b598edf33d957a2898991d714f"},
+    {file = "SQLAlchemy-1.4.7-cp27-cp27m-win32.whl", hash = "sha256:58075eab5e32daf51e637ac88c63057c3a5e84602cfeb30db4258838ef6f7a2b"},
+    {file = "SQLAlchemy-1.4.7-cp27-cp27m-win_amd64.whl", hash = "sha256:8df743c79181ecc6aadaf10569d452ef3eda06764fe0adc4ea981a48c01e1ad5"},
+    {file = "SQLAlchemy-1.4.7-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:bb69a2d93c1a98a8d4ca24a8012ade4b771087dddbe077ad4ef4911d7f17185d"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:d10117c9ce096bd6fb9a13c6fad274982f7889028e22a05719a6d219e2cf977e"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:abf18c62c4740d7199e443537066904789052d6d165cb279eb91bea35ea42ec4"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:8672ff62c9d48f62aa17bb806a591cdfed801d139eecbcf9224bffb80f6fdc30"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:8ecabd4cead9a582e2ffa7a3918bc31155d5c24b1fd16ed617171f913c438da1"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-manylinux2014_x86_64.whl", hash = "sha256:e98934855337d76aa7726f444b0fa597a462271a95d01bc050644d88e1ee5aae"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-win32.whl", hash = "sha256:6adb07e199781457b75f4773e63577a2898f95141f030b956a2a186055f24e76"},
+    {file = "SQLAlchemy-1.4.7-cp36-cp36m-win_amd64.whl", hash = "sha256:d81a68df4f3eee490b66ba990648d3c77cbf2475291ef92aa4e05ef541ecfd66"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:ef6d98d5b51eb826516499429e059872b61e272cb44630ca8de87650242d07d8"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:d5ef5619d421f8a86af874f867d17d823cd970ad0f2ae7c30723beb16922b4d6"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:c74310f13e5a113ef658345e2cedf9aa1fcb8b9a588e07d54c083c7fc71edf42"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:069fcda89c7d168382f674b5b566643f1420e4e7704c00cced2579675deb4eed"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:673cb375deb17e1561340710f428b33c27a11980d991a2ac88d7bf1c623faa0b"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-win32.whl", hash = "sha256:aea57c7a5a4135abc10f81ce433b23325cbb9648a5dcb0ac1af1cdd413f7d0cb"},
+    {file = "SQLAlchemy-1.4.7-cp37-cp37m-win_amd64.whl", hash = "sha256:6913ea108e7583f2d7ba4bc9cf4f2b1e0cdacf7e66e4cdc04192f870e64306ff"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:72152b64508dd807ba2a26d9dfc4da450d0ba1808c9f96ddbc397c435735fac3"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:9de4c84ea180c07f1d4010db2cfdbf9fe67bf7caafcfb1053644c8c03bfa3fd0"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:89860d594cb3256718d74ff7406a405a890eac71bcc044b3ba6868850d934a48"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:5d84442d85491dc473bf99f4d90ad45dd2e5539743f4d1216b15ba26575ba572"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-manylinux2014_x86_64.whl", hash = "sha256:fdd1e4ed5d526aa4c7a01ed2157d01f0234eaecdb04b1c3b5084d0902986be9f"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-win32.whl", hash = "sha256:3a022a7985a49cacf21e2a73bab083e4852943466d250d932554650d705fcc62"},
+    {file = "SQLAlchemy-1.4.7-cp38-cp38-win_amd64.whl", hash = "sha256:a7f450cbab9670949e7d9f0eac1dd93eaaffce319608bf4b863f0b751decef42"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:2bfadb3279f51252565baed9aa071c1bef875fcde60bf4a172136289ac208804"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:1d1172a9e5ead90d9299ccad8c5eecf40372a3721ff82fc4b4ee42835baf4659"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:bea07faab746743c8d82650b51129ff2705d53a0094161cfa6145e7ce77b9644"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:a3a40d2a0cb2ca2886f8f2fe768e83aeca489a162c8233974b9b2e429827ed85"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-manylinux2014_x86_64.whl", hash = "sha256:50b1cb7c9f6f0bbc68c06453d66d4a34ca75ba60bce61d49bf007edfd2621d0a"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-win32.whl", hash = "sha256:d26d8a3865c9f33d7b3b356a577c7f26c499a9f080ae33e4282a65a8a2170cef"},
+    {file = "SQLAlchemy-1.4.7-cp39-cp39-win_amd64.whl", hash = "sha256:606ac6a7640cc642fd53c5e693c560ad9fc21ef97aa7e799eb96b6d7f28ad723"},
+    {file = "SQLAlchemy-1.4.7.tar.gz", hash = "sha256:84115f97d88c8ccf26db81b7997c5f5de9ae360e0785ef859d0987794495f0a9"},
 ]
 sqlparse = [
     {file = "sqlparse-0.4.1-py3-none-any.whl", hash = "sha256:017cde379adbd6a1f15a61873f43e8274179378e95ef3fede90b5aa64d304ed0"},
     {file = "sqlparse-0.4.1.tar.gz", hash = "sha256:0f91fd2e829c44362cbcfab3e9ae12e22badaa8a29ad5ff599f9ec109f0454e8"},
+]
+statsmodels = [
+    {file = "statsmodels-0.12.2-cp36-cp36m-macosx_10_15_x86_64.whl", hash = "sha256:c1d98ce2072f5e772cbf91d05475490368da5d3ee4a3150062330c7b83221ceb"},
+    {file = "statsmodels-0.12.2-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:4184487e9c281acad3d0bda19445c69db292f0dbb18f25ebf56a7966a0a28eef"},
+    {file = "statsmodels-0.12.2-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:37e107fa11299090ed90f93c7172162b850c28fd09999937b971926813e887c5"},
+    {file = "statsmodels-0.12.2-cp36-none-win32.whl", hash = "sha256:5d3e7333e1c5b234797ed57c3d1533371374c1e1e7e7ed54d27805611f96e2d5"},
+    {file = "statsmodels-0.12.2-cp36-none-win_amd64.whl", hash = "sha256:aaf3c75fd22cb9dcf9c1b28f8ae87521310870f4dd8a6a4f1010f1e46d992377"},
+    {file = "statsmodels-0.12.2-cp37-cp37m-macosx_10_15_x86_64.whl", hash = "sha256:c48b7cbb37a651bb1cd23614abc10f447845ad3c3a713bf74e2aad20cfc94ae7"},
+    {file = "statsmodels-0.12.2-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:a3bd3922463dda8ad33e5e5075d2080e9e012aeb2032b5cdaeea9b79c2472000"},
+    {file = "statsmodels-0.12.2-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:43de84bc08c8b9f778502aed7a476d6e68674e6878718e533b07d569cf0927a9"},
+    {file = "statsmodels-0.12.2-cp37-none-win32.whl", hash = "sha256:0197855aa1d40c42532d6a75b4ca72e30826a50d90ec3047a404f9702d8b814f"},
+    {file = "statsmodels-0.12.2-cp37-none-win_amd64.whl", hash = "sha256:93273aa1c31caf59bcce9790ca4c3f54fdc45a37c61084d06f1ba4fbe56e7752"},
+    {file = "statsmodels-0.12.2-cp38-cp38-macosx_10_15_x86_64.whl", hash = "sha256:3e94306d4c07e332532ea4911d1f1d1f661c79aa73f22c5bb22e6dd47b40d562"},
+    {file = "statsmodels-0.12.2-cp38-cp38-manylinux1_i686.whl", hash = "sha256:f3a7622f3d0ce2fc204f43b74de4e03e42775609705bf94d656b730482ca935a"},
+    {file = "statsmodels-0.12.2-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:587deb788e7f8f3f866d28e812cf5c082b4d4a2d3f5beea94d0e9699ea71ef22"},
+    {file = "statsmodels-0.12.2-cp38-none-win32.whl", hash = "sha256:cbbdf6f708c9a1f1fad5cdea5e4342d6fdb37e42e92288c2cf906b99976ffe15"},
+    {file = "statsmodels-0.12.2-cp38-none-win_amd64.whl", hash = "sha256:1fa720e895112a1b04b27002218b0ea7f10dd1d9cffd1c018c88bbfb82520f57"},
+    {file = "statsmodels-0.12.2-cp39-cp39-macosx_10_15_x86_64.whl", hash = "sha256:c3782ce846a52862ac72f89d22b6b1ca13d877bc593872309228a6f05d934321"},
+    {file = "statsmodels-0.12.2-cp39-cp39-manylinux1_i686.whl", hash = "sha256:8f93cb3f7d87c1fc7e51b3b239371c25a17a0a8e782467fdf4788cfef600724a"},
+    {file = "statsmodels-0.12.2-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:f61f33f64760a22100b6b146217823f73cfedd251c9bdbd58453ca94e63326c7"},
+    {file = "statsmodels-0.12.2-cp39-none-win32.whl", hash = "sha256:3aab85174444f1bcad1e9218a3d3db08f0f86eeb97985236ca8605a0a39ce305"},
+    {file = "statsmodels-0.12.2-cp39-none-win_amd64.whl", hash = "sha256:94d3632d56c13eebebaefb52bd4b43144ad5a131337b57842f46db826fa7d2d3"},
+    {file = "statsmodels-0.12.2.tar.gz", hash = "sha256:8ad7a7ae7cdd929095684118e3b05836c0ccb08b6a01fe984159475d174a1b10"},
 ]
 tabulate = [
     {file = "tabulate-0.8.9-py3-none-any.whl", hash = "sha256:d7c013fe7abbc5e491394e10fa845f8f32fe54f8dc60c6622c6cf482d25d47e4"},

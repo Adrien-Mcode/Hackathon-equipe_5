@@ -22,6 +22,8 @@ shap = "0.39.0"
 dynamic-yaml = "1.2.3"
 munch = '2.5.0'
 dash = '1.20.0'
+lightgbm = '3.2.0'
+category_encoders = "2.2.2"
 
 [tool.poetry.dev-dependencies]
 
