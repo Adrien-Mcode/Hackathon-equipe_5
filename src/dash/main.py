@@ -8,7 +8,7 @@ from src.dash.app import app
 
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
-    html.Div(children="menu-principal", className="menu-title"),
+    html.Div(children="Menu Principal", className="menu-title"),
     dcc.Dropdown(
         id="menu-principal",
         options=[
@@ -17,7 +17,7 @@ app.layout = html.Div([
         ],
         value="linear_regression",
         clearable=False,
-        className="dropdown",
+        className="menu-box",
     ),
     html.Div(id='page-content')
 ])
