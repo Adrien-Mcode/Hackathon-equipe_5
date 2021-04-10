@@ -8,6 +8,7 @@ import plotly.express as px
 from src.dash.model_report.shap_values import shap_layout
 
 df_score = pd.read_csv(r'..\..\df_petit.csv')
+data = pd.read_csv(r'..\..\df_petit.csv', parse_dates=["date", "items_first_enabled_date"])
 
 @app.callback(Output('scatter_plot_score','figure'),
               [
@@ -40,7 +41,22 @@ def figure_score (type,model,sample_size,only_quanti,inputer,metric_1,metric_2):
               Input("tabs-example", "value"))
 def update_children(value):
     if value == 'explicabilite-locale':
-        children = shap_layout
+        children = [
+            dcc.Slider(id="slider-shap",
+                       min=0,
+                       max= data.store_id.unique()[0].max(),
+                       step=None,
+                       marks={store_id: str(store_id) for store_id in data.store_id.unique()},
+                       value=data.store_id.unique()[0]),
+            dcc.Slider(id="slider-date",
+                       min=data.date.min(),
+                       max=data.date.max(),
+                       step=None,
+                       marks={date: date for date in data.date.unique()},
+                       value=data.date.unique()[0])
+
+        ]
+
         return children
     elif value == 'performances-globales':
         children = [dcc.Dropdown(

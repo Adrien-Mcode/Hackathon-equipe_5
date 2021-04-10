@@ -1,0 +1,13 @@
+artifact_path: lightgbm_500000_iterative_False_lightgbm
+flavors:
+  python_function:
+    env: conda.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    python_version: 3.6.8
+  sklearn:
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 0.24.1
+run_id: fd007f8da47a47f2b4035244412b20ba
+utc_time_created: '2021-04-10 06:23:07.261203'

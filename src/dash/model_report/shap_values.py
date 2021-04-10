@@ -6,7 +6,7 @@ import numpy as np
 from io import BytesIO
 import base64
 
-logged_model = 'file:///C:/Users/9605647W/OneDrive%20-%20SNCF/Bureau/repo_prog/Hackathon-equipe_5/mlruns/0/fd007f8da47a47f2b4035244412b20ba/artifacts/lightgbm_500000_iterative_False_lightgbm'
+logged_model = 'file:///C:/Users/SURFACE/Documents/GitHub/Hackathon-equipe_5/lightgbm_500000_iterative_False_lightgbm'
 
 data = pd.read_csv(r'..\..\df_petit.csv', parse_dates=["date", "items_first_enabled_date"])
 # Load model as a PyFuncModel.
@@ -38,7 +38,6 @@ shap_layout = [
         ),
 
         html.Img(id="shap",
-            src='',
             height='auto',
             width='auto',
         )
