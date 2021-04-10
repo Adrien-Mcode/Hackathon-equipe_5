@@ -7,21 +7,21 @@ import plotly.express as px
 from src.dash.app import app
 from dash.dependencies import Input, Output
 
-<<<<<<< Updated upstream
-data = pd.read_csv('../../df_petit.csv')
-=======
-data = pd.read_csv(r'C:\Users\SURFACE\Documents\GitHub\Hackathon-equipe_5\df_petit.csv')
->>>>>>> Stashed changes
+
+data = pd.read_csv(r'..\..\df_petit.csv')
 data_churn = data.loc[data.target == 1]
 data_cl = data.loc[data.target == 0]
 churn_date = data_churn.groupby('date').sum().target
-df_mutual = pd.read_csv(r'C:\Users\SURFACE\Documents\GitHub\Hackathon-equipe_5\mutual_information\df_mutual.csv')
+df_mutual = pd.read_csv(r'..\..\df_mutual.csv')
 df_mutual.columns = ['Variables','Information mutuelle','Correlation']
+
 
 @app.callback(Output("date_churn","figure"),
               [Input("date-range", "start_date"),
                Input("date-range", "end_date")
                ])
+
+
 def update_date_charts(start_date, end_date):
     mask=((churn_date.index <= end_date)
             & (churn_date.index >= start_date)
