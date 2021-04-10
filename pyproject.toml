@@ -4,13 +4,8 @@ version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 
-[[tool.poetry.source]]
-name = "sncf"
-url = "https://nexusm-repo-mob.apps.eul.sncf.fr/repository/pypi-public/simple/"
-default = true
-
 [tool.poetry.dependencies]
-python = "3.6.8"
+python = "3.6.13"
 Cython = ">=0.28.2"
 pandas = ">=1.0.0"
 scikit-learn = "0.24.1"
